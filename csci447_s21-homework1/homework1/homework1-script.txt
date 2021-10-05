@@ -1,0 +1,79 @@
+connordemarco@Demarco-PC-Ubuntu:~/git-repos/cs-447/non-git/homework1$ make
+kpl aFunProgram
+asm aFunProgram.s
+lddd Runtime.o System.o aFunProgram.o -o aFunProgram
+connordemarco@Demarco-PC-Ubuntu:~/git-repos/cs-447/non-git/homework1$ blitz -g aFunProgram
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+iuhgaisdgaouq
+iuhgaisdgaouq
+pajsdpijasdqwqqpoijdap
+pajsdpijasdqwqqpoijdap
+alksd;l
+alksd;l
+;ljasd
+;ljasd
+qdasda
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+                   _Label_12:
+                   _Label_14:
+00287C: 87D0001A       or      r0,0x001A,r13	! decimal: 26, ascii: ".."  
+
+Entering machine-level debugger...
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> ^Z
+[18]+  Stopped                 blitz -g aFunProgram
+connordemarco@Demarco-PC-Ubuntu:~/git-repos/cs-447/non-git/homework1$ make
+kpl aFunProgram
+asm aFunProgram.s
+lddd Runtime.o System.o aFunProgram.o -o aFunProgram
+connordemarco@Demarco-PC-Ubuntu:~/git-repos/cs-447/non-git/homework1$ blitz -g aFunProgram
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+hsalidha
+hsalidha
+ioywqoeh1233;'
+ioywqoeh1233;'
+aojsdpujlaqqqqasdioasoid
+aojsdpujlaqqqqasdioasoid
+aqa
+aqa
+hello there general kenobi
+hello there general kenobi
+qoiahsda
+
+****  A 'debug' instruction was encountered  *****
+Done!  The next instruction to execute will be:
+                   _Label_12:
+                   _Label_14:
+00287C: 87D00019       or      r0,0x0019,r13	! decimal: 25, ascii: ".."  
+
+Entering machine-level debugger...
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> q
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 434852141
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 434852141
+connordemarco@Demarco-PC-Ubuntu:~/git-repos/cs-447/non-git/homework1$ 

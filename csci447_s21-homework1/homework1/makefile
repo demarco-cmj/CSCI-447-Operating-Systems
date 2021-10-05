@@ -1,0 +1,51 @@
+#
+# Type 'make' with this 'makefile' file to build the example BLITZ programs.
+# It will execute the following commands as needed, based on files'
+# most-recent-update times.
+#
+
+all: Echo Hello HelloWorld aFunProgram
+
+Echo.o: Echo.s
+	asm Echo.s
+
+Echo: Echo.o
+	lddd Echo.o -o Echo
+
+Hello.o: Hello.s
+	asm Hello.s
+
+Hello: Hello.o
+	lddd Hello.o -o Hello
+
+Runtime.o: Runtime.s
+	asm Runtime.s
+
+System.s: System.h System.k
+	kpl System -unsafe
+
+System.o: System.s
+	asm System.s
+
+HelloWorld.s: HelloWorld.h HelloWorld.k System.h
+	kpl HelloWorld
+
+HelloWorld.o: HelloWorld.s
+	asm HelloWorld.s
+
+HelloWorld: Runtime.o System.o HelloWorld.o
+	lddd Runtime.o System.o HelloWorld.o -o HelloWorld
+
+aFunProgram.s: aFunProgram.h aFunProgram.k System.h
+	kpl aFunProgram
+
+aFunProgram.o: aFunProgram.s
+	asm aFunProgram.s
+
+aFunProgram: Runtime.o System.o aFunProgram.o
+	lddd Runtime.o System.o aFunProgram.o -o aFunProgram
+
+clean:
+	rm -f Echo.o Echo
+	rm -f Hello.o Hello
+	rm -f Runtime.o System.s System.o HelloWorld.o HelloWorld.s HelloWorld

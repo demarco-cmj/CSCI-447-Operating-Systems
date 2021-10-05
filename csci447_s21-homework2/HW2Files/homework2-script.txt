@@ -1,0 +1,71 @@
+connordemarco@Demarco-PC-Ubuntu:~/git-repos/cs-447/non-git/homework2/HW2Files$ make os
+kpl Main -unsafe
+asm Main.s
+lddd System.o List.o Thread.o Switch.o Synch.o Main.o Runtime.o -o os
+connordemarco@Demarco-PC-Ubuntu:~/git-repos/cs-447/non-git/homework2/HW2Files$ blitz -g os
+Error in DISK File: File "DISK" could not be opened for updating.  Simulated disk I/O has been disabled!
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Example Thread-based Programs...
+Initializing Thread Scheduler...
+        Producer-A         A
+A       Producer-A         A
+AA      Producer-A         A
+AAA     Producer-A         A
+AAAA    Producer-B             B
+AAAAB   Producer-C                 C
+CAAABC   Producer-D                     D
+CDAABCD   Producer-E                         E
+CDEABCDE   Consumer-2                               |          C
+DEABCDE   Consumer-3                               |              D
+EABCDE   Producer-A         A
+EABCDEA   Consumer-1                               |      E
+ABCDEA   Producer-B             B
+ABCDEAB   Producer-D                     D
+ABDDEABD   Producer-C                 C
+ABDCEABDC   Producer-E                         E
+ABDCEABDCE   Consumer-2                               |          A
+BDCEABDCE   Consumer-3                               |              B
+DCEABDCE   Consumer-1                               |      D
+CEABDCE   Producer-B             B
+CEBBDCEB   Producer-C                 C
+CEBCDCEBC   Producer-D                     D
+CEBCDCEBCD   Producer-E                         E
+EEBCDEEBCDE   Consumer-2                               |          E
+EBCDEEBCDE   Consumer-1                               |      E
+BCDEEBCDE   Consumer-3                               |              B
+CDEEBCDE   Producer-B             B
+CDEBBCDEB   Producer-C                 C
+CDEBCCDEBC   Producer-E                         E
+EDEBCEDEBCE   Producer-D                     D
+EDEBCEDEBCED   Consumer-2                               |          E
+DEBCEDEBCED   Consumer-1                               |      D
+EBCEDEBCED   Consumer-3                               |              E
+BCEDEBCED   Producer-C                 C
+BCEDCBCEDC   Producer-B             B
+BCEDCBCEDCB   Producer-E                         E
+BEEDCBEEDCBE   Producer-D                     D
+BEDDCBEDDCBED   Consumer-2                               |          B
+EDDCBEDDCBED   Consumer-3                               |              E
+DDCBEDDCBED   Consumer-1                               |      D
+DCBEDDCBED   Consumer-3                               |              D
+CBEDDCBED   Consumer-2                               |          C
+BEDDCBED   Consumer-1                               |      B
+EDDCBED   Consumer-3                               |              E
+DDCBED   Consumer-1                               |      D
+DCBED   Consumer-2                               |          D
+CBED    Consumer-3                               |              C
+BED     Consumer-2                               |          B
+ED      Consumer-1                               |      E
+D       Consumer-3                               |              D
+     
+*****  A 'wait' instruction was executed and no more interrupts are scheduled... halting emulation!  *****
+
+Done!  The next instruction to execute will be:
+000EC8: 09000000       ret     
+Number of Disk Reads    = 0
+Number of Disk Writes   = 0
+Instructions Executed   = 218372
+Time Spent Sleeping     = 0
+    Total Elapsed Time  = 218372
+connordemarco@Demarco-PC-Ubuntu:~/git-repos/cs-447/non-git/homework2/HW2Files$
